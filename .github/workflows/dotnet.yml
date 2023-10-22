@@ -37,7 +37,7 @@ jobs:
       with:
         projectBaseDir: Sources
         args: >
-          -Dsonar.projectKey=CICD_Csharp_FromGithub
+          -Dsonar.projectKey=CICD_CSharp_BUT_Mohamed_Hassani
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
