@@ -1,0 +1,17 @@
+{
+  "name": "Alain Damasio",
+  "key": "/authors/OL3980331A",
+  "type": { "key": "/type/author" },
+  "remote_ids": { "wikidata": "Q2829704" },
+  "birth_date": "1 August 1969",
+  "latest_revision": 2,
+  "revision": 2,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2008-04-30T20:50:18.033121"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2022-12-19T19:05:32.693708"
+  }
+}

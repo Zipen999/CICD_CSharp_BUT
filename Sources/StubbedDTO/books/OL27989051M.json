@@ -1,0 +1,38 @@
+{
+  "publishers": [ "Le B\u00e9lial'" ],
+  "subtitle": "Terra Ignota volume 2",
+  "covers": [ 9376451 ],
+  "physical_format": "paperback",
+  "full_title": "Sept redditions : Terra Ignota volume 2",
+  "key": "/books/OL27989051M",
+  "authors": [ { "key": "/authors/OL7475792A" } ],
+  "source_records": [ "amazon:2843449626" ],
+  "title": "Sept redditions",
+  "notes": "Source title: Sept redditions: Terra Ignota volume 2 (Roman)",
+  "number_of_pages": 544,
+  "publish_date": "May 28, 2020",
+  "works": [ { "key": "/works/OL19213555W" } ],
+  "type": { "key": "/type/edition" },
+  "identifiers": {},
+  "isbn_10": [ "2843449626" ],
+  "isbn_13": [ "9782843449628" ],
+  "classifications": {},
+  "languages": [ { "key": "/languages/fre" } ],
+  "contributors": [
+    {
+      "name": "Michelle Charrier",
+      "role": "Translator"
+    }
+  ],
+  "series": [ "Terra Ignota #2" ],
+  "latest_revision": 4,
+  "revision": 4,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2020-05-02T22:25:18.922926"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2021-12-07T07:10:56.070304"
+  }
+}

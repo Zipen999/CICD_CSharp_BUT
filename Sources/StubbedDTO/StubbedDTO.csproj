@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="books\" />
+    <None Remove="authors\" />
+    <None Remove="works\" />
+    <None Remove="ratings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="books\" />
+    <Folder Include="authors\" />
+    <Folder Include="works\" />
+    <Folder Include="ratings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="*\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JsonReader\JsonReader.csproj" />
+    <ProjectReference Include="..\DtoAbstractLayer\DtoAbstractLayer.csproj" />
+    <ProjectReference Include="..\LibraryDTO\LibraryDTO.csproj" />
+  </ItemGroup>
+</Project>

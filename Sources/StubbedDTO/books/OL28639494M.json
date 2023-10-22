@@ -1,0 +1,32 @@
+{
+  "publishers": [ "Pocket", "POCKET" ],
+  "source_records": [ "amazon:2266235818" ],
+  "title": "Le Cycle de Dune Tome 2/Le Messie de Dune",
+  "notes": {
+    "type": "/type/text",
+    "value": "Source title: Le Cycle de Dune Tome 2/Le Messie de Dune (Science-fiction) (French Edition)"
+  },
+  "number_of_pages": 336,
+  "isbn_13": [ "9782266235815" ],
+  "covers": [ 10328275 ],
+  "physical_format": "mass market paperback",
+  "isbn_10": [ "2266235818" ],
+  "publish_date": "Nov 22, 2012",
+  "key": "/books/OL28639494M",
+  "authors": [
+    { "key": "/authors/OL79034A" },
+    { "key": "/authors/OL1846639A" }
+  ],
+  "works": [ { "key": "/works/OL893526W" } ],
+  "type": { "key": "/type/edition" },
+  "latest_revision": 3,
+  "revision": 3,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2020-08-05T18:59:33.402965"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2021-10-24T22:27:33.839388"
+  }
+}

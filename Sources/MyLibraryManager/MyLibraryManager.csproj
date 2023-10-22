@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DtoAbstractLayer\DtoAbstractLayer.csproj" />
+    <ProjectReference Include="..\LibraryDTO\LibraryDTO.csproj" />
+    <ProjectReference Include="..\MyLibraryDB\MyLibraryDB.csproj" />
+    <ProjectReference Include="..\MyLibraryEntities\MyLibraryEntities.csproj" />
+    <ProjectReference Include="..\StubbedDB\StubbedDB.csproj" />
+  </ItemGroup>
+</Project>

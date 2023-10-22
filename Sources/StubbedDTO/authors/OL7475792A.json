@@ -1,0 +1,15 @@
+{
+  "key": "/authors/OL7475792A",
+  "name": "Ada Palmer",
+  "type": { "key": "/type/author" },
+  "latest_revision": 4,
+  "revision": 4,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2019-03-11T19:38:25.579004"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2021-12-07T07:11:29.213401"
+  }
+}

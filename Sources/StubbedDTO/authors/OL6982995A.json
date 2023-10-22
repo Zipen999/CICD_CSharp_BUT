@@ -1,0 +1,36 @@
+{
+  "personal_name": "James S. A. Corey",
+  "remote_ids": {
+    "isni": "0000000382626033",
+    "viaf": "266413968",
+    "wikidata": "Q6142591"
+  },
+  "source_records": [ "amazon:1478933771", "amazon:1528822218", "amazon:1456121650", "bwb:9780356510385", "amazon:0678452547", "bwb:9780356517773" ],
+  "alternate_names": [ "Daniel Abraham", "Ty Franck", "James S.A. Corey", "James James S. A. Corey" ],
+  "type": { "key": "/type/author" },
+  "key": "/authors/OL6982995A",
+  "entity_type": "org",
+  "links": [
+    {
+      "title": "Source",
+      "url": "http://www.danielabraham.com/james-s-a-corey/",
+      "type": { "key": "/type/link" }
+    }
+  ],
+  "bio": {
+    "type": "/type/text",
+    "value": "James S.A. Corey is the pen name used by collaborators [Daniel Abraham](https://openlibrary.org/authors/OL1427729A/Daniel_Abraham) and [Ty Franck](https://openlibrary.org/authors/OL7523472A/Ty_Franck).\r\n\r\nThe first and last name are taken from Abraham's and Franck's middle names, respectively, and S.A. are the initials of Abraham's daughter."
+  },
+  "photos": [ 11112303 ],
+  "name": "James S. A. Corey",
+  "latest_revision": 13,
+  "revision": 13,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2011-10-20T08:06:05.906616"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2023-05-18T18:14:26.659278"
+  }
+}

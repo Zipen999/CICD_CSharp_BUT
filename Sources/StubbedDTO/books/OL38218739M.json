@@ -1,0 +1,31 @@
+{
+  "type": { "key": "/type/edition" },
+  "title": "Dune - tome 1",
+  "authors": [
+    { "key": "/authors/OL9956442A" },
+    { "key": "/authors/OL1846639A" }
+  ],
+  "publish_date": "Nov 22, 2012",
+  "source_records": [ "amazon:2266233203" ],
+  "number_of_pages": 832,
+  "publishers": [ "POCKET", "Pocket" ],
+  "isbn_10": [ "2266233203" ],
+  "isbn_13": [ "9782266233200" ],
+  "physical_format": "pocket book",
+  "notes": {
+    "type": "/type/text",
+    "value": "Source title: Dune - tome 1 (1)"
+  },
+  "works": [ { "key": "/works/OL27962193W" } ],
+  "key": "/books/OL38218739M",
+  "latest_revision": 1,
+  "revision": 1,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2022-05-30T17:18:00.228322"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2022-05-30T17:18:00.228322"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "remote_ids": {
+    "viaf": "59083797",
+    "wikidata": "Q7934",
+    "isni": "0000000121347853"
+  },
+  "name": "Frank Herbert",
+  "source_records": [ "amazon:3870703903", "amazon:2253113190", "amazon:1427228493" ],
+  "alternate_names": [ "Herbert, Frank", "FRANK HERBERT", "Frank HERBERT", "herbert-frank", "frank herbert", "Herbert Frank", "Frank Herbert Dost Korpe", "HERBERT FRANK", "Franck Herbert", "F Herbert" ],
+  "photos": [ 12194537, 7277115, 10643754 ],
+  "links": [
+    {
+      "url": "http://en.wikipedia.org/wiki/Frank_Herbert",
+      "type": { "key": "/type/link" },
+      "title": "Wikipedia English"
+    },
+    {
+      "url": "http://fr.wikipedia.org/wiki/Frank_Herbert",
+      "type": { "key": "/type/link" },
+      "title": "Wikipedia France"
+    }
+  ],
+  "key": "/authors/OL79034A",
+  "birth_date": "8 October 1920",
+  "death_date": "11 February 1986",
+  "type": { "key": "/type/author" },
+  "personal_name": "Herbert, Frank.",
+  "bio": {
+    "type": "/type/text",
+    "value": "Real name: Franklin Patrick Herbert Jr."
+  },
+  "latest_revision": 15,
+  "revision": 15,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2008-04-01T03:28:50.625462"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2021-11-12T11:41:55.357817"
+  }
+}

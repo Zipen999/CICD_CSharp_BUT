@@ -1,0 +1,24 @@
+{
+  "description": "\"The long years of near-utopia have come to an abrupt end. Peace and order are now figments of the past. Corruption, deception, and insurgency hum within the once steadfast leadership of the Hives, nations without fixed location. The heartbreaking truth is that for decades, even centuries, the leaders of the great Hives bought the world's stability with a trickle of secret murders, mathematically planned. So that no faction could ever dominate. So that the balance held. The Hives' fa\u00e7ade of solidity is the only hope they have for maintaining a semblance of order, for preventing the public from succumbing to the savagery and bloodlust of wars past. But as the great secret becomes more and more widely known, that fa\u00e7ade is slipping away. Just days earlier, the world was a pinnacle of human civilization. Now everyone--Hives and hiveless, Utopians and sensayers, emperors and the downtrodden, warriors and saints--scrambles to prepare for the seemingly inevitable war\"--",
+  "covers": [ 8544084, 8619055, 10180814 ],
+  "key": "/works/OL19635836W",
+  "authors": [
+    {
+      "author": { "key": "/authors/OL7475792A" },
+      "type": { "key": "/type/author_role" }
+    }
+  ],
+  "title": "The Will to Battle",
+  "subjects": [ "Utopias", "Fiction", "Fiction, science fiction, general", "series:terra_ignota" ],
+  "type": { "key": "/type/work" },
+  "latest_revision": 7,
+  "revision": 7,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2019-04-21T08:07:12.674468"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2021-12-07T07:08:28.885088"
+  }
+}

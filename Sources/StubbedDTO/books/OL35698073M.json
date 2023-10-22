@@ -1,0 +1,31 @@
+{
+  "identifiers": { "wikidata": [ "Q81118625" ] },
+  "title": "Trop semblable \u00e0 l'\u00e9clair",
+  "publish_date": "2019",
+  "publishers": [ "Le B\u00e9lial'" ],
+  "type": { "key": "/type/edition" },
+  "isbn_13": [ "9782843449581" ],
+  "series": [ "Terra Ignota #1" ],
+  "physical_format": "paperback",
+  "contributors": [
+    {
+      "name": "Michelle Charrier",
+      "role": "Translator"
+    }
+  ],
+  "languages": [ { "key": "/languages/fre" } ],
+  "key": "/books/OL35698073M",
+  "number_of_pages": 672,
+  "works": [ { "key": "/works/OL19800093W" } ],
+  "source_records": [ "amazon:2843449588" ],
+  "latest_revision": 4,
+  "revision": 4,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2021-12-07T02:12:00.907076"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2022-11-15T15:47:17.497202"
+  }
+}

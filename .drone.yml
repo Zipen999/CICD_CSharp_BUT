@@ -1,0 +1,125 @@
+kind: pipeline
+type: docker
+name: CI & CD
+ 
+trigger:
+  event:
+    - push
+
+steps:
+  - name: build
+    image: mcr.microsoft.com/dotnet/sdk:7.0
+    commands:
+      - cd Sources/
+      - dotnet restore OpenLibraryWS_Wrapper.sln
+      - dotnet build OpenLibraryWS_Wrapper.sln -c Release --no-restore
+      - dotnet publish OpenLibraryWS_Wrapper.sln -c Release --no-restore -o CI_PROJECT_DIR/build/release
+
+  - name: tests
+    image: mcr.microsoft.com/dotnet/sdk:7.0
+    commands:
+      - cd Sources/
+      - dotnet restore OpenLibraryWS_Wrapper.sln
+      - dotnet test OpenLibraryWS_Wrapper.sln --no-restore
+    depends_on: [build]
+
+  - name: code-inspection
+    image: hub.codefirst.iut.uca.fr/marc.chevaldonne/codefirst-dronesonarplugin-dotnet7
+    secrets: [ SONAR_TOKEN ]
+    settings:
+      sonar_host: https://codefirst.iut.uca.fr/sonar/
+      sonar_token:
+        from_secret: SONAR_TOKEN
+    commands:
+      - cd Sources/
+      - dotnet restore OpenLibraryWS_Wrapper.sln
+      - dotnet sonarscanner begin /k:"OpenLibraryWS_Wrapper_Mohamed_Hassani" /d:sonar.host.url=$${PLUGIN_SONAR_HOST} /d:sonar.coverageReportPaths="coveragereport/SonarQube.xml" /d:sonar.coverage.exclusions="Tests/**" /d:sonar.login=$${PLUGIN_SONAR_TOKEN} 
+      - dotnet build OpenLibraryWS_Wrapper.sln -c Release --no-restore
+      - dotnet test OpenLibraryWS_Wrapper.sln --logger trx --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura --collect "XPlat Code Coverage"
+      - reportgenerator -reports:"**/coverage.cobertura.xml" -reporttypes:SonarQube -targetdir:"coveragereport"
+      - dotnet publish OpenLibraryWS_Wrapper.sln -c Release --no-restore -o CI_PROJECT_DIR/build/release
+      - dotnet sonarscanner end /d:sonar.login=$${PLUGIN_SONAR_TOKEN}
+    depends_on: [build]
+
+  - name: swagger
+    image: mcr.microsoft.com/dotnet/sdk:7.0
+    volumes:
+    - name: docs
+      path: /docs
+    commands:
+      - cd Sources/
+      - dotnet restore OpenLibraryWS_Wrapper.sln
+      - dotnet build OpenLibraryWS_Wrapper.sln -c Release --no-restore
+      - dotnet publish OpenLibraryWS_Wrapper.sln -c Release --no-restore -o CI_PROJECT_DIR/build/release
+      - dotnet tool restore
+      - dotnet swagger tofile --yaml --output /docs/swagger.json CI_PROJECT_DIR/build/release/OpenLibraryWrapper.dll v1
+    depends_on: [code-inspection]
+    
+  - name: generate-and-deploy-docs
+    image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-docdeployer
+    failure: ignore
+    volumes:
+      - name: docs
+        path: /docs
+    commands:
+      - /entrypoint.sh
+    depends_on: [swagger]
+
+  - name: docker-build-and-push
+    image: plugins/docker
+    settings:
+       dockerfile: Sources/Dockerfile
+       context: Sources/
+       registry: hub.codefirst.iut.uca.fr
+       repo: hub.codefirst.iut.uca.fr/mohamed.hassani/openlibraryws_wrapper
+       username:
+         from_secret: SECRET_REGISTRY_USERNAME
+       password:
+         from_secret: SECRET_REGISTRY_PASSWORD
+    depends_on: [generate-and-deploy-docs]
+
+  - name: hadolint
+    image: hadolint/hadolint:latest-alpine
+    commands:
+      - hadolint Sources/Dockerfile
+      
+  - name: deploy-container-mysql_MariaDB_WebAPI
+    image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
+    environment:
+      IMAGENAME: mariadb:10
+      CONTAINERNAME: MariaDB_WebAPI
+      COMMAND: create
+      PRIVATE: true
+      CODEFIRST_CLIENTDRONE_ENV_MARIADB_ROOT_PASSWORD: 
+        from_secret: SECRET_DB_ROOT_PASSWORD
+      CODEFIRST_CLIENTDRONE_ENV_MARIADB_DATABASE:
+        from_secret: SECRET_DB_DATABASE
+      CODEFIRST_CLIENTDRONE_ENV_MARIADB_USER:
+        from_secret: SECRET_DB_USER
+      CODEFIRST_CLIENTDRONE_ENV_MARIADB_PASSWORD:
+        from_secret: SECRET_DB_PASSWORD
+
+  - name: deploy-container
+    image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
+    environment:
+        IMAGENAME: hub.codefirst.iut.uca.fr/mohamed.hassani/openlibraryws_wrapper:latest
+        CONTAINERNAME: openlibrary_container
+        COMMAND: create
+        OVERWRITE: true
+        ADMINS: mohamedhassani
+        CODEFIRST_CLIENTDRONE_ENV_MARIADB_URL:
+          from_secret: SECRET_DB_URL
+        CODEFIRST_CLIENTDRONE_ENV_MARIADB_DATABASE:
+          from_secret: SECRET_DB_DATABASE
+        CODEFIRST_CLIENTDRONE_ENV_MARIADB_USER:
+          from_secret: SECRET_DB_USER
+        CODEFIRST_CLIENTDRONE_ENV_MARIADB_PASSWORD:
+          from_secret: SECRET_DB_PASSWORD
+        CODEFIRST_CLIENTDRONE_ENV_SOURCE: DATABASE
+    depends_on: [docker-build-and-push]
+
+
+
+volumes:
+- name: docs
+  temp: {}

@@ -1,0 +1,26 @@
+{
+  "type": { "key": "/type/edition" },
+  "title": "La Zone du Dehors",
+  "authors": [ { "key": "/authors/OL3980331A" } ],
+  "publish_date": "Feb 04, 2021",
+  "source_records": [ "amazon:2072927528" ],
+  "number_of_pages": 656,
+  "publishers": [ "FOLIO", "GALLIMARD" ],
+  "isbn_10": [ "2072927528" ],
+  "isbn_13": [ "9782072927522" ],
+  "physical_format": "pocket book",
+  "full_title": "La Zone du Dehors",
+  "covers": [ 12393645 ],
+  "works": [ { "key": "/works/OL19960903W" } ],
+  "key": "/books/OL35699439M",
+  "latest_revision": 1,
+  "revision": 1,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2021-12-07T22:26:13.534930"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2021-12-07T22:26:13.534930"
+  }
+}

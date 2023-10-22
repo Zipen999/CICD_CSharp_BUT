@@ -1,0 +1,26 @@
+{
+  "type": { "key": "/type/work" },
+  "title": "Total Recall et autres r\u00e9cits",
+  "authors": [
+    {
+      "type": { "key": "/type/author_role" },
+      "author": { "key": "/authors/OL274606A" }
+    },
+    {
+      "type": { "key": "/type/author_role" },
+      "author": { "key": "/authors/OL3113922A" }
+    }
+  ],
+  "key": "/works/OL28185064W",
+  "covers": [ 13858141 ],
+  "latest_revision": 3,
+  "revision": 3,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2022-07-10T01:29:29.296699"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2023-04-07T22:44:13.567567"
+  }
+}

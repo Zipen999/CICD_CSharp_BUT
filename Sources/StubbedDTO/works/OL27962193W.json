@@ -1,0 +1,26 @@
+{
+  "type": { "key": "/type/work" },
+  "title": "Dune - tome 1",
+  "authors": [
+    {
+      "type": { "key": "/type/author_role" },
+      "author": { "key": "/authors/OL9956442A" }
+    },
+    {
+      "type": { "key": "/type/author_role" },
+      "author": { "key": "/authors/OL1846639A" }
+    }
+  ],
+  "key": "/works/OL27962193W",
+  "covers": [ 13823878 ],
+  "latest_revision": 2,
+  "revision": 2,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2022-05-30T17:18:00.228322"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2023-04-04T09:05:11.531979"
+  }
+}

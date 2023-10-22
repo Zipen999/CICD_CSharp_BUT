@@ -1,0 +1,32 @@
+{
+  "works": [ { "key": "/works/OL19635836W" } ],
+  "title": "La Volont\u00e9 de se battre",
+  "publishers": [ "Le B\u00e9lial'" ],
+  "publish_date": "2020",
+  "key": "/books/OL35698083M",
+  "type": { "key": "/type/edition" },
+  "identifiers": {},
+  "covers": [ 12392970 ],
+  "isbn_13": [ "9782843449758" ],
+  "classifications": {},
+  "languages": [ { "key": "/languages/fre" } ],
+  "contributors": [
+    {
+      "name": "Michelle Charrier",
+      "role": "Translator"
+    }
+  ],
+  "number_of_pages": 526,
+  "series": [ "Terra Ignota #3" ],
+  "physical_format": "paperback",
+  "latest_revision": 3,
+  "revision": 3,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2021-12-07T02:23:07.593997"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2021-12-07T02:24:57.135563"
+  }
+}

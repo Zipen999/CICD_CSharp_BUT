@@ -1,0 +1,16 @@
+{
+  "type": { "key": "/type/author" },
+  "name": "Frank Herbert",
+  "key": "/authors/OL9956442A",
+  "source_records": [ "amazon:2221252306" ],
+  "latest_revision": 1,
+  "revision": 1,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2021-11-14T17:07:35.515652"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2021-11-14T17:07:35.515652"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "type": { "key": "/type/edition" },
+  "title": "Total Recall et autres r\u00e9cits",
+  "authors": [
+    { "key": "/authors/OL274606A" },
+    { "key": "/authors/OL3113922A" }
+  ],
+  "publish_date": "Jul 12, 2012",
+  "source_records": [ "amazon:2070448908" ],
+  "number_of_pages": 448,
+  "publishers": [ "FOLIO", "GALLIMARD" ],
+  "isbn_10": [ "2070448908" ],
+  "isbn_13": [ "9782070448906" ],
+  "physical_format": "pocket book",
+  "works": [ { "key": "/works/OL28185064W" } ],
+  "key": "/books/OL38586212M",
+  "covers": [ 13858141 ],
+  "latest_revision": 3,
+  "revision": 3,
+  "created": {
+    "type": "/type/datetime",
+    "value": "2022-07-10T01:29:29.296699"
+  },
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2023-04-07T22:44:13.567567"
+  }
+}

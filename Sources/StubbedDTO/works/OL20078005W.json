@@ -1,0 +1,16 @@
+{
+  "title": "La m\u00e9nagerie de papier",
+  "created": {
+    "type": "/type/datetime",
+    "value": "2019-08-05T10:36:44.503432"
+  },
+  "covers": [ 8750266 ],
+  "last_modified": {
+    "type": "/type/datetime",
+    "value": "2019-08-05T10:36:44.503432"
+  },
+  "latest_revision": 1,
+  "key": "/works/OL20078005W",
+  "type": { "key": "/type/work" },
+  "revision": 1
+}
